@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import colors from "../../utils/color"
-import { StyledLink } from "../../utils/Atoms"
+import colors from "../../utils/style/color"
+import { StyledLink } from "../../utils/style/Atoms"
 import { useTheme } from "../../utils/hooks"
 import HomeIllustration from "../../assets/home-illustration.svg"
 
@@ -49,7 +49,7 @@ function Home() {
               Repérez vos besoins, on s’occupe du reste, avec les meilleurs
               talents
             </StyledTitle>
-            <StyledLink to="/survey/1" $isFullLink>
+            <StyledLink to="/survey/1" $isFullLink test-id="ceci-est-un-test">
               Faire le test
             </StyledLink>
           </LeftCol>

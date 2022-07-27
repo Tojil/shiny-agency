@@ -1,7 +1,7 @@
 import Card from '../../components/Card'
 import styled from 'styled-components'
-import colors from '../../utils/color'
-import { Loader } from '../../utils/Atoms'
+import colors from '../../utils/style/color'
+import { Loader } from '../../utils/style/Atoms'
 import { useFetch, useTheme } from '../../utils/hooks'
 
 const CardsContainer = styled.div`

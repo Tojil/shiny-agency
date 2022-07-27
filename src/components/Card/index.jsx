@@ -3,7 +3,7 @@ import { useState } from "react"
 import { useTheme } from "../../utils/hooks"
 import DefaultPicture from "../../assets/profile.png"
 import styled from "styled-components"
-import colors from "../../utils/color"
+import colors from "../../utils/style/color"
 
 const CardLabel = styled.span`
     color: ${({ theme }) => (theme === 'light' ? colors.primary : '#FFFFFF')};

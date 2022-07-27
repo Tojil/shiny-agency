@@ -2,8 +2,8 @@ import { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import colors from '../../utils/color'
-import { Loader } from '../../utils/Atoms'
+import colors from '../../utils/style/color'
+import { Loader } from '../../utils/style/Atoms'
 import { SurveyContext } from '../../utils/context'
 import { useFetch, useTheme } from '../../utils/hooks'
 
@@ -69,7 +69,6 @@ function Survey() {
   }
   const { data, isLoading, error } = useFetch(`http://localhost:8000/survey`)
   const surveyData = data?.surveyData
-  console.log(surveyData);
 
   if (error) {
     return <span>Oups il y a eu un problème ! </span>
@@ -79,7 +78,7 @@ function Survey() {
     <SurveyContainer>
       <QuestionTitle theme={theme}>Question {questionNumber}</QuestionTitle>
       {isLoading ? (
-        <Loader />
+        <Loader data-testid="loader" />
       ) : (
         <QuestionContent theme={theme}>
           {surveyData && surveyData[questionNumber]}
