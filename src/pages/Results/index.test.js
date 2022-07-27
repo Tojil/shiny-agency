@@ -7,7 +7,7 @@ describe('The formatJobList function', () => {
   })
   it('should not add a coma to the last element of the list', () => {
     const expectedState = 'item3'
-    expect(formatJobList('item3', 3, 2)).toEqual(expectedState)
+    expect(formatJobList('item3', 3, 3)).toEqual(expectedState)
   })
 })
 
